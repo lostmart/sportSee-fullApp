@@ -1,13 +1,33 @@
 import './App.css'
+import { useState, useEffect } from 'react'
+import UserModel from './classes/userModel'
+import axios from 'axios'
 
 function App() {
-	return (
-		<div>
-			<header>
-				<h1>Hi this is the beggining ...</h1>
-			</header>
-		</div>
-	)
+	const [data, setData] = useState(null)
+
+	useEffect(() => {
+		const fetchData = async () => {
+			const result = await axios('http://localhost:3000/user/12')
+
+			console.log(result.data.data)
+			const userData = new UserModel(result.data.data)
+			setData(userData)
+		}
+
+		fetchData()
+	}, [])
+
+	if (data) {
+		return (
+			<ul>
+				<li>{data.id}</li>
+				<li>Name: {data.userInfos.firstName}</li>
+				<li>Last Name: {data.userInfos.lastName}</li>
+				<li>Score: {data.todayScore}</li>
+			</ul>
+		)
+	}
 }
 
 export default App
