@@ -1,0 +1,10 @@
+# FRONTEND dependencies
+frontend/node_modules
+frontend/.pnp
+frontend.pnp.js
+
+# production
+frontend/build
+
+frontend/npm-debug.log*
+
