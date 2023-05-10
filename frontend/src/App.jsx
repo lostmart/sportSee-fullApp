@@ -1,6 +1,4 @@
 import './App.css'
-import { useState, useEffect } from 'react'
-import fetchData from './services/dataFetcher'
 
 import {
 	createBrowserRouter,

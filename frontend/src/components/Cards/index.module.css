@@ -1,0 +1,35 @@
+.card {
+	background-color: #fbfbfb;
+	max-width: 258px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 33px;
+	border-radius: 5px;
+}
+
+.imgCont {
+	background-color: #ff00001a;
+	padding: 1em;
+	opacity: 0.66;
+	border-radius: 6px;
+	width: 50px;
+}
+
+.textCont{
+  min-width: 88px;
+}
+
+.card h2 {
+	font-weight: bold;
+	font-size: 20px;
+	color: #282d30;
+	line-height: 24px;
+}
+
+.card span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #74798c;
+	line-height: 24px;
+}
