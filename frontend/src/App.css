@@ -1,5 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+:root {
+	--prim-clr: #e60000;
+	--sec-clr: #020203;
+	--primalet: #ff0101;
+}
+
+.navBar {
+	background-color: var(--sec-clr);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 17px 28px;
+}
+
+.navBar ul {
+	list-style-type: none;
+	padding: 0 5px;
+	display: flex;
+	width: 69%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+}
+
+.navBar a {
+	color: white;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+.navBar-left {
+	background-color: var(--sec-clr);
+	width: 117px;
+	position: absolute;
+	min-height: calc(100vh - 90px);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 100px;
+}
+
+.navBar-left span {
+	width: 190px;
+	display: block;
+	transform: rotateZ(-90deg);
+	font-size: 12px;
+	position: relative;
+	top: 3em;
+}
+
+.navBar-left ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 316px;
+	margin-top: 16vh;
+}
+
+.container {
+	padding-left: 220px;
 }

@@ -1,9 +1,6 @@
 # SportSee
 
-
-## Available Scripts
-
-In the project directory, you can run:
+## FrontEnd Available Scripts
 
 ### `npm start`
 

@@ -1,0 +1,17 @@
+.header {
+	color: black;
+}
+
+.header h2 {
+	font-size: 48px;
+	margin-top: 62px;
+	margin-bottom: 41px;
+}
+
+.header span {
+	color: #ff0101;
+}
+
+.header p {
+	font-size: 18px;
+}

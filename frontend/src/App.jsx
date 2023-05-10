@@ -1,33 +1,52 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import UserModel from './classes/userModel'
-import axios from 'axios'
+import fetchData from './services/dataFetcher'
 
-function App() {
-	const [data, setData] = useState(null)
+import {
+	createBrowserRouter,
+	createRoutesFromElements,
+	RouterProvider,
+	Route,
+	Outlet,
+} from 'react-router-dom'
 
-	useEffect(() => {
-		const fetchData = async () => {
-			const result = await axios('http://localhost:3000/user/12')
+// pages
+import Home from './pages/Home'
+import Profile from './pages/Profile'
+import Params from './pages/Params'
+import Blog from './pages/Blog'
+import NotFound from './pages/NotFound'
 
-			console.log(result.data.data)
-			const userData = new UserModel(result.data.data)
-			setData(userData)
-		}
+// components
+import TopNavigation from './components/TopNavigation'
+import VerticalNavigation from './components/VerticalNavigation'
 
-		fetchData()
-	}, [])
+const Layout = () => {
+	return (
+		<>
+			<TopNavigation />
+			<VerticalNavigation />
+			<main className="container">
+				<Outlet></Outlet>
+			</main>
+		</>
+	)
+}
 
-	if (data) {
-		return (
-			<ul>
-				<li>{data.id}</li>
-				<li>Name: {data.userInfos.firstName}</li>
-				<li>Last Name: {data.userInfos.lastName}</li>
-				<li>Score: {data.todayScore}</li>
-			</ul>
-		)
-	}
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route path="/" element={<Layout />}>
+			<Route index element={<Home />} />
+			<Route path="profile" element={<Profile />} />
+			<Route path="properties" element={<Params />} />
+			<Route path="blog" element={<Blog />} />
+			<Route path="*" element={<NotFound />} />
+		</Route>
+	)
+)
+
+const App = () => {
+	return <RouterProvider router={router} />
 }
 
 export default App
