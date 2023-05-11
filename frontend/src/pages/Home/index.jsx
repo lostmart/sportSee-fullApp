@@ -1,5 +1,7 @@
 import Header from '../../components/Header'
 
+import styles from './index.module.css'
+
 import { useState, useEffect } from 'react'
 import fetchData from '../../services/dataFetcher'
 import Card from '../../components/Cards'
@@ -22,28 +24,32 @@ const Home = () => {
 	}, [])
 	if (userData)
 		return (
-			<div>
+			<div className={styles.home}>
 				<Header userInfos={userData.userInfos} />
-				<div>
+				<div className={styles.cardsContainer}>
 					<Card
 						itemsInfos={`${userData.keyData.calorieCount.toLocaleString()}Kcal`}
 						values="Calories"
 						icon={energy}
+						bgClr="#FBEAEA"
 					/>
 					<Card
 						itemsInfos={`${userData.keyData.proteinCount}g`}
 						values="Proteines"
 						icon={chicken}
+						bgClr="#E9F4FB"
 					/>
 					<Card
 						itemsInfos={`${userData.keyData.carbohydrateCount}g`}
 						values="Glucides"
 						icon={apple}
+						bgClr="#FBF6E5"
 					/>
 					<Card
 						itemsInfos={`${userData.keyData.lipidCount}g`}
 						values="Lipides"
 						icon={cheeseburger}
+						bgClr="#FBEAEF"
 					/>
 				</div>
 			</div>

@@ -4,20 +4,22 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 33px;
+	padding: 32px;
 	border-radius: 5px;
 }
 
 .imgCont {
-	background-color: #ff00001a;
 	padding: 1em;
-	opacity: 0.66;
 	border-radius: 6px;
-	width: 50px;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.textCont{
-  min-width: 88px;
+.textCont {
+	min-width: 88px;
 }
 
 .card h2 {
