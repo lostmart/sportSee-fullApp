@@ -5,7 +5,7 @@ const Card = ({ itemsInfos, values, icon, bgClr }) => {
 	return (
 		<article className={styles.card}>
 			<div className={styles.imgCont} style={{ backgroundColor: bgClr }}>
-				<img src={icon} alt="calories" />
+				<img src={icon} alt={values} />
 			</div>
 			<div className={styles.textCont}>
 				<h2>{itemsInfos}</h2>

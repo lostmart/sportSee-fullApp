@@ -1,3 +1,5 @@
+import UserSession from './userSession'
+
 /** Class representing user's activity */
 class UserActivity {
 	/**
@@ -5,9 +7,9 @@ class UserActivity {
 	 * @param {number} id - user's id
 	 * @param {Array.<UserSession>} sessions - an array of UserSession. Each object has (day->string, kilogram->number, calories->number)
 	 */
-	constructor({ id, sessions }) {
-		this.id = id ?? null
-		this.sessions = (sessions ?? []).map(session => new UserSession(session));
+	constructor({ userId, sessions }) {
+		this.userId = userId ?? null
+		this.sessions = (sessions ?? []).map((session) => new UserSession(session))
 	}
 }
 

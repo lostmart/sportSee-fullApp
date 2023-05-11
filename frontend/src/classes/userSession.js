@@ -5,9 +5,11 @@ class UserSession {
 	 * @param {number} id - user's id
 	 * @param {array} sessions - an array of objects. Each object has (day->string, kilogram->number, calories->number)
 	 */
-	constructor({ day, kilograms, calories, sessionLength }) {
-		this.day = day
-		// ...
+	constructor({ day, kilogram, calories, sessionLength }) {
+		this.day = day ?? null
+		this.kilogram = kilogram ?? null
+		this.calories = calories ?? null
+		this.sessionLength = sessionLength ?? null
 	}
 }
 

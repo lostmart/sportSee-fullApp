@@ -45,7 +45,7 @@ body {
 	background-color: var(--sec-clr);
 	width: 117px;
 	position: absolute;
-	min-height: calc(100vh - 90px);
+	min-height: 100vh;
 	color: white;
 	display: flex;
 	flex-direction: column;
