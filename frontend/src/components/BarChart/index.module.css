@@ -1,0 +1,42 @@
+.legendContainer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 1.9em;
+}
+
+.legendContainer h2 {
+	color: #20253a;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.legendContainer ul {
+	display: flex;
+	gap: 3em;
+	color: #74798c;
+	list-style: none;
+	position: relative;
+}
+
+.legendContainer li::before {
+	content: '';
+	background-color: #282d30;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	left: -24px;
+	bottom: 4px;
+	border-radius: 50%;
+}
+
+.legendContainer li:last-child::before {
+	background-color: #e60000;
+	left: 98px;
+}

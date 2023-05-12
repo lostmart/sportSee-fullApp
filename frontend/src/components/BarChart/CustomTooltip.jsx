@@ -13,7 +13,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 		return (
 			<div style={styles}>
 				<span>{payload[0].value}kg</span>
-				<span>{payload[1].value}Kcal</span>
+				<span>{payload[1].value}kCal</span>
 			</div>
 		)
 	}
