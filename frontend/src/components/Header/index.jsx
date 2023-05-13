@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types'
 
 const Header = ({ userInfos }) => {
 	return (
-		<div className={styles.header}>
+		<div className={styles.header + ' header'}>
 			<h2>
 				Bonjour <span>{userInfos.firstName}</span>
 			</h2>

@@ -10,6 +10,7 @@ import chicken from '../../assets/chicken.svg'
 import cheeseburger from '../../assets/cheeseburger.svg'
 import apple from '../../assets/apple.svg'
 import BarChartComp from '../../components/BarChart'
+import LineChartComp from '../../components/LineChart'
 
 const Home = () => {
 	let [userData, setUserData] = useState(null)
@@ -32,10 +33,13 @@ const Home = () => {
 	if (userData)
 		return (
 			<div className={styles.home}>
-				<Header userInfos={userData.userInfos} />
-				<div style={{ display: 'flex' }}>
-					<BarChartComp chartData={activityData.sessions} />
-					<div className={styles.cardsContainer}>
+				<div className="pageContainer">
+					<Header userInfos={userData.userInfos} />
+					<BarChartComp
+						chartData={activityData.sessions}
+						className={styles.barChart}
+					/>
+					<div className="cardsContainer">
 						<Card
 							itemsInfos={`${userData.keyData.calorieCount.toLocaleString()}Kcal`}
 							values="Calories"
@@ -61,6 +65,7 @@ const Home = () => {
 							bgClr="#FBEAEF"
 						/>
 					</div>
+					<LineChartComp />
 				</div>
 			</div>
 		)

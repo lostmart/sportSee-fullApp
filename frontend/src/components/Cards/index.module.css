@@ -4,7 +4,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 32px;
+	padding: 1.4vw;
 	border-radius: 5px;
 }
 
@@ -20,17 +20,18 @@
 
 .textCont {
 	min-width: 88px;
+	margin-left: 1em;
 }
 
 .card h2 {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 1.4vw;
 	color: #282d30;
 	line-height: 24px;
 }
 
 .card span {
-	font-size: 14px;
+	font-size: 1.1vw;
 	font-weight: bold;
 	color: #74798c;
 	line-height: 24px;

@@ -3,12 +3,12 @@
 	top: 0px;
 	left: 0px;
 	z-index: 1;
-	height: 50px;
+	height: 85px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	padding: 0 1.9em;
+	padding: 0 3em;
 }
 
 .legendContainer h2 {

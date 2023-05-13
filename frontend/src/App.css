@@ -45,7 +45,7 @@ body {
 	background-color: var(--sec-clr);
 	width: 117px;
 	position: absolute;
-	min-height: 100vh;
+	min-height: 120%;
 	color: white;
 	display: flex;
 	flex-direction: column;
@@ -72,6 +72,36 @@ body {
 }
 
 .container {
-	padding-left: 220px;
+	padding-left: 17.8%;
 }
 
+.pageContainer {
+	display: grid;
+	grid-template-areas:
+		'header header header header'
+		'poids poids poids grlInfo'
+		'dureSession radar kpi grlInfo';
+	grid-template-rows: 232px 320px 260px;
+	grid-template-columns: 258px auto 258px auto;
+}
+
+.header {
+	grid-area: header;
+}
+
+.barChart {
+	grid-area: poids;
+}
+
+.lineChart {
+	grid-area: dureSession;
+	padding-top: 3em;
+}
+
+.cardsContainer {
+	height: 613px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	grid-area: grlInfo;
+}
