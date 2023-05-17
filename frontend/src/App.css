@@ -82,7 +82,7 @@ body {
 		'poids poids poids grlInfo'
 		'dureSession radar kpi grlInfo';
 	grid-template-rows: 232px 320px 260px;
-	grid-template-columns: 258px auto 258px auto;
+	grid-template-columns: 258px 258px 260px auto;
 }
 
 .header {
@@ -96,6 +96,16 @@ body {
 .lineChart {
 	grid-area: dureSession;
 	padding-top: 3em;
+}
+
+.radarChart {
+	grid-area: radar;
+	padding-top: 2em;
+}
+
+.radialChart {
+	grid-area: kpi;
+	padding-top: 2em;
 }
 
 .cardsContainer {

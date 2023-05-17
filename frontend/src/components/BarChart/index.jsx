@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react'
-
 import {
 	BarChart,
 	Bar,
@@ -16,10 +14,6 @@ import styles from './index.module.css'
 import CustomTooltip from './CustomTooltip'
 
 const BarChartComp = ({ chartData }) => {
-	useEffect(() => {
-		console.log(window.innerWidth)
-	})
-
 	return (
 		<div style={{ position: 'relative' }} className="barChart">
 			<div className={styles.legendContainer}>

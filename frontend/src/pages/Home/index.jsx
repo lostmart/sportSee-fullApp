@@ -11,6 +11,8 @@ import cheeseburger from '../../assets/cheeseburger.svg'
 import apple from '../../assets/apple.svg'
 import BarChartComp from '../../components/BarChart'
 import LineChartComp from '../../components/LineChart'
+import RadarChartComp from '../../components/RadarChart'
+import RadialBarChartComp from '../../components/RadialBar'
 
 const Home = () => {
 	let [userData, setUserData] = useState(null)
@@ -66,6 +68,8 @@ const Home = () => {
 						/>
 					</div>
 					<LineChartComp />
+					<RadarChartComp />
+					<RadialBarChartComp />
 				</div>
 			</div>
 		)
