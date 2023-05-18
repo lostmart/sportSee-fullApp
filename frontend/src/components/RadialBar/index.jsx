@@ -1,87 +1,45 @@
-import {
-	RadialBarChart,
-	RadialBar,
-	Legend,
-	ResponsiveContainer,
-} from 'recharts'
+import { PropTypes } from 'prop-types'
+import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts'
+import styles from './index.module.css'
 
-const RadialBarChartComp = () => {
+const RadialBarChartComp = ({ userInfos }) => {
 	const data = [
 		{
-			name: '18-24',
-			uv: 31.47,
-			pv: 2400,
-			fill: '#8884d8',
+			name: 'objectif',
+			uv: 1,
+			fill: '#FBFBFB',
 		},
 		{
-			name: '25-29',
-			uv: 26.69,
-			pv: 4567,
-			fill: '#83a6ed',
-		},
-		{
-			name: '30-34',
-			uv: 15.69,
-			pv: 1398,
-			fill: '#8dd1e1',
-		},
-		{
-			name: '35-39',
-			uv: 8.22,
-			pv: 9800,
-			fill: '#82ca9d',
-		},
-		{
-			name: '40-49',
-			uv: 8.63,
-			pv: 3908,
-			fill: '#a4de6c',
-		},
-		{
-			name: '50+',
-			uv: 2.63,
-			pv: 4800,
-			fill: '#d0ed57',
-		},
-		{
-			name: 'unknow',
-			uv: 6.67,
-			pv: 4800,
-			fill: '#ffc658',
+			name: 'objectif',
+			uv: userInfos,
+			fill: '#FF0000',
 		},
 	]
-
-	const style = {
-		top: '50%',
-		right: 0,
-		transform: 'translate(0, -50%)',
-		lineHeight: '24px',
-	}
 	return (
-		<ResponsiveContainer width="100%" height="100%" className="radialChart">
-			<RadialBarChart
-				cx="50%"
-				cy="50%"
-				innerRadius="10%"
-				outerRadius="80%"
-				barSize={10}
-				data={data}>
-				<RadialBar
-					minAngle={15}
-					label={{ position: 'insideStart', fill: '#fff' }}
-					background
-					clockWise
-					dataKey="uv"
-				/>
-				<Legend
-					iconSize={10}
-					layout="vertical"
-					verticalAlign="middle"
-					wrapperStyle={style}
-				/>
-			</RadialBarChart>
-		</ResponsiveContainer>
+		<section className={'radialChart ' + styles.radialChartCont}>
+			<h2>Score</h2>
+			<p className={styles.description}>
+				<span>{userInfos * 100}%</span> de votre objectif
+			</p>
+			<ResponsiveContainer width="100%" height="100%">
+				<RadialBarChart
+					cx="50%"
+					cy="46%"
+					innerRadius="50%"
+					outerRadius="120%"
+					barSize={10}
+					data={data}
+					startAngle={90}
+					endAngle={450}>
+					<RadialBar background clockWise dataKey="uv" />
+				</RadialBarChart>
+			</ResponsiveContainer>
+		</section>
 	)
+}
+
+RadialBarChartComp.propTypes = {
+	userInfos: PropTypes.number,
 }
 
 export default RadialBarChartComp

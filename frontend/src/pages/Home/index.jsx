@@ -26,7 +26,7 @@ const Home = () => {
 		)
 		setUserData(userData)
 		setactivityData(activityData)
-		console.dir(activityData)
+		console.dir(userData)
 	}
 
 	useEffect(() => {
@@ -69,7 +69,7 @@ const Home = () => {
 					</div>
 					<LineChartComp />
 					<RadarChartComp />
-					<RadialBarChartComp />
+					<RadialBarChartComp userInfos={userData.todayScore} />
 				</div>
 			</div>
 		)

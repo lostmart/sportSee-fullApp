@@ -23,29 +23,23 @@ const BarChartComp = ({ chartData }) => {
 					<li>Calories bûlées kCal</li>
 				</ul>
 			</div>
-			<ResponsiveContainer width={window.innerWidth * 0.6} height="75%">
+			<ResponsiveContainer width="100%" height="100%">
 				<BarChart
 					style={{
 						backgroundColor: '#FBFBFB',
 						padding: '85px 30px 15px 30px',
-						height: 'auto',
 					}}
 					data={chartData}
 					margin={{
 						top: 5,
 						right: 30,
 						left: 20,
-						bottom: 0,
+						bottom: 20,
 					}}>
 					<CartesianGrid strokeDasharray="2 2" />
 					<XAxis dataKey="day" />
 					<YAxis orientation="right" />
 					<Tooltip content={<CustomTooltip />} />
-					{/* <Legend
-					iconType="circle"
-					align="right"
-					margin={{ top: 20, left: 0, right: 0, bottom: 0 }}
-				/> */}
 					<Bar
 						dataKey="kilogram"
 						fill="#282D30"

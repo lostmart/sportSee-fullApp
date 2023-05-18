@@ -1,0 +1,24 @@
+.radialChartCont h2 {
+	color: #20253a;
+	font-size: 16px;
+}
+
+.description {
+	color: #74798c;
+	text-align: center;
+	max-width: 80px;
+	position: absolute;
+	left: 50%;
+	top: 54%;
+	transform: translate(-50%, -50%);
+	font-size: 18px;
+	z-index: 10;
+	line-height: 1.3;
+}
+
+.description span {
+	font-weight: bold;
+	font-size: 24px;
+	color: #282d30;
+	display: block;
+}
