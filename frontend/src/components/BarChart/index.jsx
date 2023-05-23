@@ -23,7 +23,7 @@ const BarChartComp = ({ chartData }) => {
 					<li>Calories bûlées kCal</li>
 				</ul>
 			</div>
-			<ResponsiveContainer width="100%" height="100%">
+			<ResponsiveContainer width="100%" height="80%">
 				<BarChart
 					style={{
 						backgroundColor: '#FBFBFB',

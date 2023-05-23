@@ -6,10 +6,20 @@ class UserPerformance {
 	 * @param {object} kind - an object with the following properties (6 properties each one is a string)
 	 * @param {array} data - array  of objects with these properties (value->number, kind->number)
 	 */
-	constructor({ id, kind, data }) {
-		this.id = id ?? null
-		this.kind = kind ?? null
+	constructor({ userId, kind, data }) {
+		this.id = userId ?? null
+		// get only the values of the kind object
+		this.kind = Object.values(kind)
 		this.data = data ?? null
+		// for each object in the array 'data' asign the property kind of it to the correspondent kind of the this.kind
+		this.data.forEach((obj, indx) => {
+			// console.log(obj.kind)
+			obj.kind = this.kind[indx]
+		})
+	}
+
+	get kindType() {
+		return Object.values(this.kind)
 	}
 }
 

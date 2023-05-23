@@ -34,9 +34,9 @@ const Layout = () => {
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<Layout />}>
-			<Route index element={<Home />} />
+			<Route path="/:userId" element={<Home />} />
 			<Route path="profile" element={<Profile />} />
-			<Route path="properties" element={<Params />} />
+			<Route path="" element={<Params />} />
 			<Route path="blog" element={<Blog />} />
 			<Route path="*" element={<NotFound />} />
 		</Route>

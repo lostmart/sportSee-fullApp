@@ -16,4 +16,8 @@ Header.propTypes = {
 	userInfos: PropTypes.object,
 }
 
+Header.defaultProps = {
+	userInfos: '',
+}
+
 export default Header

@@ -3,11 +3,11 @@ import {
 	RadarChart,
 	PolarGrid,
 	PolarAngleAxis,
-	PolarRadiusAxis,
 	ResponsiveContainer,
 } from 'recharts'
 
-const RadarChartComp = () => {
+const RadarChartComp = ({ userPerformance }) => {
+	// console.log(userPerformance)
 	const data = [
 		{
 			subject: 'Math',
@@ -49,17 +49,15 @@ const RadarChartComp = () => {
 
 	return (
 		<ResponsiveContainer className="radarChart" width="100%" height="100%">
-			<RadarChart cx="50%" cy="50%" outerRadius="55%" data={data}>
+			<RadarChart
+				cx="50%"
+				cy="50%"
+				
+				outerRadius="46%"
+				data={userPerformance.data}>
 				<PolarGrid />
-				<PolarAngleAxis dataKey="subject" />
-				<PolarRadiusAxis />
-				<Radar
-					name="Mike"
-					dataKey="A"
-					stroke="#8884d8"
-					fill="#8884d8"
-					fillOpacity={0.6}
-				/>
+				<PolarAngleAxis radius="20%" dataKey="kind" />
+				<Radar dataKey="value" fill="#E60000" fillOpacity={0.7} />
 			</RadarChart>
 		</ResponsiveContainer>
 	)
