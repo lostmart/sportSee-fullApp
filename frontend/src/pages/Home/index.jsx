@@ -36,7 +36,8 @@ const Home = () => {
 	const bringUserData = async () => {
 		const resUserData = await fetchData(
 			`http://localhost:3000/user/${userId}`,
-			'userData'
+			'userData',
+			userId
 		)
 		resUserData.message
 			? setError({ status: true, msg: resUserData.message })
@@ -47,7 +48,8 @@ const Home = () => {
 	const bringActivityData = async () => {
 		const resActivityData = await fetchData(
 			`http://localhost:3000/user/${userId}/activity`,
-			'activityData'
+			'activityData',
+			userId
 		)
 		setactivityData(resActivityData)
 	}
@@ -55,7 +57,8 @@ const Home = () => {
 	const bringUserAvarageSessions = async () => {
 		const resUserAvarageSessions = await fetchData(
 			`http://localhost:3000/user/${userId}/average-sessions`,
-			'userAvarageSessions'
+			'userAvarageSessions',
+			userId
 		)
 		setAvarageSessions(resUserAvarageSessions)
 		// console.log(resUserAvarageSessions)
@@ -64,7 +67,8 @@ const Home = () => {
 	const bringUserPerformance = async () => {
 		const resUserPerformance = await fetchData(
 			`http://localhost:3000/user/${userId}/performance`,
-			'userPerformance'
+			'userPerformance',
+			userId
 		)
 		setUserPerformance(resUserPerformance)
 		// console.log(userPerformance)

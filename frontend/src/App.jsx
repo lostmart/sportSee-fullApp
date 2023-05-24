@@ -14,16 +14,20 @@ import Profile from './pages/Profile'
 import Params from './pages/Params'
 import Blog from './pages/Blog'
 import NotFound from './pages/NotFound'
+import OfflineMode from './components/Error/OfflineMode'
 
 // components
 import TopNavigation from './components/TopNavigation'
 import VerticalNavigation from './components/VerticalNavigation'
+
+import { API_MODE } from './services/dataFetcher'
 
 const Layout = () => {
 	return (
 		<>
 			<TopNavigation />
 			<VerticalNavigation />
+			{!API_MODE ? <OfflineMode /> : ''}
 			<main className="container">
 				<Outlet></Outlet>
 			</main>
