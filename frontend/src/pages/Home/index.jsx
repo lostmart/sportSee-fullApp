@@ -1,29 +1,33 @@
 import { useParams, Navigate } from 'react-router-dom'
-
-import Header from '../../components/Header'
-
-import styles from './index.module.css'
-
 import { useState, useEffect } from 'react'
+
+// utils
+import styles from './index.module.css'
 import fetchData from '../../services/dataFetcher'
-import Card from '../../components/Cards'
+
+// assets
 import energy from '../../assets/energy.svg'
 import chicken from '../../assets/chicken.svg'
 import cheeseburger from '../../assets/cheeseburger.svg'
 import apple from '../../assets/apple.svg'
+
+// components
+import Header from '../../components/Header'
+import Card from '../../components/Cards'
 import BarChartComp from '../../components/BarChart'
 import CardinalAreaChart from '../../components/CardinalAreaChart'
 import RadarChartComp from '../../components/RadarChart'
 import RadialBarChartComp from '../../components/RadialBar'
 import LoadingComp from '../../components/LoadingComp'
+import ErrorPage from '../../components/Error'
 
 const Home = () => {
+	let [hasError, setError] = useState(null)
+
 	let [userData, setUserData] = useState(null)
 	let [activityData, setactivityData] = useState(null)
 	let [userAvarageSessions, setAvarageSessions] = useState(null)
 	let [userPerformance, setUserPerformance] = useState(null)
-
-	// let [userId, setUserId] = useState('12')
 
 	/*  user ID */
 	const params = useParams()
@@ -34,7 +38,9 @@ const Home = () => {
 			`http://localhost:3000/user/${userId}`,
 			'userData'
 		)
-		console.log(resUserData)
+		resUserData.message
+			? setError({ status: true, msg: resUserData.message })
+			: setError(null)
 		setUserData(resUserData)
 	}
 
@@ -64,8 +70,6 @@ const Home = () => {
 		// console.log(userPerformance)
 	}
 
-	// USER_PERFORMANCE
-
 	useEffect(() => {
 		bringUserData()
 		bringActivityData()
@@ -73,16 +77,12 @@ const Home = () => {
 		bringUserPerformance()
 	}, [userId])
 
+	/*   error handling   */
 	if (userData && userData.message === 'Request failed with status code 404') {
-		return (
-			<div>
-				<h1>No se encuentra este usuario</h1>
-				<p>
-					Este usuario si que existe ! <Navigate to="/12"></Navigate>
-				</p>
-			</div>
-		)
+		console.clear()
+		return <Navigate to="/12"></Navigate>
 	}
+	if (hasError) return <ErrorPage msg={hasError.msg} />
 	return userData ? (
 		<div className={styles.home}>
 			<div className="pageContainer">

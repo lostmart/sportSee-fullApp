@@ -1,0 +1,46 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.container h2 {
+	margin-top: 2em;
+}
+
+.container img {
+	width: 100%;
+	max-width: 350px;
+	animation: fadeIn 1700ms 750ms forwards;
+	opacity: 0;
+}
+
+.container p {
+	max-width: 400px;
+	text-align: center;
+	font-size: 17px;
+	transform: translateY(-60px);
+}
+
+.container button {
+	padding: 1em 1.7em;
+	border: none;
+	background-color: #020203;
+	color: white;
+	cursor: pointer;
+	transition: all 500ms ease-in-out;
+	margin-bottom: 7em;
+}
+
+.container button:hover {
+	background-color: #2e2e59;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

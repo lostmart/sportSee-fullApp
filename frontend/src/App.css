@@ -81,7 +81,7 @@ body {
 		'header header header header'
 		'poids poids poids grlInfo'
 		'dureSession radar kpi grlInfo';
-	grid-template-rows: 20vh 40vh 30vh;
+	grid-template-rows: 22vh 40vh 30vh;
 	grid-template-columns: 24.5% 24.5% 24.5% 20%;
 	gap: 2%;
 }

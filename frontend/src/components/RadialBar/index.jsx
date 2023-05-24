@@ -3,8 +3,6 @@ import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts'
 import styles from './index.module.css'
 
 const RadialBarChartComp = ({ userInfos }) => {
-	console.log(userInfos)
-
 	const data = [
 		{
 			name: 'objectif',

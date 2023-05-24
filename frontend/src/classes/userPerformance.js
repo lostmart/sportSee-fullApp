@@ -1,3 +1,5 @@
+import capitalizeFirstLetter from '../services/makeCapital.js'
+
 /** Class representing user's performance */
 class UserPerformance {
 	/**
@@ -13,13 +15,8 @@ class UserPerformance {
 		this.data = data ?? null
 		// for each object in the array 'data' asign the property kind of it to the correspondent kind of the this.kind
 		this.data.forEach((obj, indx) => {
-			// console.log(obj.kind)
-			obj.kind = this.kind[indx]
+			obj.kind = capitalizeFirstLetter(this.kind[indx])
 		})
-	}
-
-	get kindType() {
-		return Object.values(this.kind)
 	}
 }
 
