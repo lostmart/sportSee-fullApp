@@ -5,7 +5,7 @@
 Welcome to the SportSee-fullApp repository! 👋
 This repository contains the full application code for SportSee, a comprehensive fitness tracking and analysis platform that uses [Recharts](#https://recharts.org/en-US/) to visually display the user's data regarding their fitness condition. SportSee allows users to track their physical activities, monitor their fitness progress, and gain valuable insights into their health and performance.
 
-## Table of Contents {#top}
+## Table of Contents{#top}
 
 - [Introduction](#intro)
 - [Features](#features)
@@ -13,7 +13,7 @@ This repository contains the full application code for SportSee, a comprehensive
 - [Contributing](#contribute)
 - [License](#license)
 
-## Introduction {#intro}
+## Introduction{#intro}
 
 SportSee is designed to provide a holistic view of an individual's fitness journey.
 
@@ -42,7 +42,7 @@ SportSee-fullApp offers a wide range of features to help users monitor and impro
 
 ## [🔝](#top)
 
-##Installation {#installation}
+##Installation{#installation}
 To run the SportSee application locally, follow these steps:
 
 ### 1. Clone it on your computer
@@ -110,7 +110,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 ## [🔝](#top)
 
-##Contributing {#contribute}
+##Contributing{#contribute}
 Contributions to SportSee-fullApp are welcome! If you would like to contribute to the project, please follow these steps:
 
 1. Fork the repository.
