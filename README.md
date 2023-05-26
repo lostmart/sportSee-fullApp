@@ -7,11 +7,13 @@ This repository contains the full application code for SportSee, a comprehensive
 
 ## Table of Contents
 
-- #### Introduction
-- #### Features
-- #### Installation
+### [Introduction](#introduction)
 
-## Introduction
+### [Features](#features)
+
+### [Installation](#installation)
+
+## [Introduction]
 
 SportSee is designed to provide a holistic view of an individual's fitness journey.
 
@@ -26,7 +28,7 @@ This repository contains the complete codebase for the SportSee application, inc
 
 ## [🔝](#table-of-contents)
 
-## Features
+## [Features]
 
 SportSee-fullApp offers a wide range of features to help users monitor and improve their fitness journey. Some key features of the application include:
 
@@ -40,7 +42,7 @@ SportSee-fullApp offers a wide range of features to help users monitor and impro
 
 ## [🔝](#table-of-contents)
 
-## Installation
+## [Installation]
 
 To run the SportSee application locally, follow these steps:
 
