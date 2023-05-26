@@ -54,7 +54,7 @@ To run the SportSee application locally, follow these steps:
 - `cd frontend`
 - `npm install`
 
-## [Section I Want]
+## Section I Want
 
 #### Front-end dependencies
 
