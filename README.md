@@ -13,14 +13,17 @@ This repository contains the full application code for SportSee, a comprehensive
 - [Contributing](#contribute)
 - [License](#license)
 
-##Introduction {#intro}
+## Introduction {#intro}
+
 SportSee is designed to provide a holistic view of an individual's fitness journey.
 
 This repository contains the complete codebase for the SportSee application, including both the front-end and back-end components. The front-end is built with React, while the back-end is powered by Node.js and Express.js. The application uses a RESTful API to communicate between the front-end and back-end.
 
 The frontend has two operating modes: =="API" and "MOCK"==
 : When "API" set top true, the 'dataFetcher' service will use axios to bring the data from the back-end. However, if set to false (offline) mode will import the data without the need of an API or back-end.
+
 `services/dataFetcher.js`
+
 ![alt text](api-mode.png)
 
 ---
@@ -71,7 +74,9 @@ To run the SportSee application locally, follow these steps:
     "web-vitals": "^2.1.4"
 }
 ```
-Note: The front end is set to run on port 3006 theought the scipt "start" 
+
+Note: The front end is set to run on port 3006 theought the scipt "start"
+
 ```json
 "start": "PORT=3006 react-scripts start",
 ```
@@ -96,6 +101,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 - The `yarn dev` command will allow you to run the micro API.
 
 ### Starting the project
+
 - The `docker image build --no-cache -t micro-api .` command will allow you to build your image.
 - The `docker container run --name micro-api -p 3000:3000 -dt micro-api yarn` command will allow you to create your Docker container and run your image on port 3000.
 - The `docker container stop micro-api` command will allow you to stop your micro-api.
