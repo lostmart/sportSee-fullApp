@@ -7,13 +7,11 @@ This repository contains the full application code for SportSee, a comprehensive
 
 ## Table of Contents
 
-- ### [Introduction](#intro)
+- ### [Introduction](#introduction)
 - ### [Features](#features)
 - ### [Installation](#installation)
-- ### [Contributing](#contribute)
-- ### [License](#license)
 
-## Introduction{#intro}
+## Introduction
 
 SportSee is designed to provide a holistic view of an individual's fitness journey.
 
@@ -28,7 +26,8 @@ This repository contains the complete codebase for the SportSee application, inc
 
 ## [🔝](#table-of-contents)
 
-##Features {#features}
+## Features
+
 SportSee-fullApp offers a wide range of features to help users monitor and improve their fitness journey. Some key features of the application include:
 
 - **Activity Tracking:** Users can track their physical activities such as running, cycling, swimming, and more.
@@ -41,7 +40,8 @@ SportSee-fullApp offers a wide range of features to help users monitor and impro
 
 ## [🔝](#table-of-contents)
 
-##Installation{#installation}
+## Installation
+
 To run the SportSee application locally, follow these steps:
 
 ### 1. Clone it on your computer
@@ -52,8 +52,6 @@ To run the SportSee application locally, follow these steps:
 
 - `cd frontend`
 - `npm install`
-
-## Section I Want
 
 #### Front-end dependencies
 
@@ -81,22 +79,22 @@ To run the SportSee application locally, follow these steps:
 "start": "PORT=3006 react-scripts start",
 ```
 
-### 4. Install dependencies for the back-end:
+### 3. Prepare you back-end:
 
-#### 4.1 Prerequisites
+#### 3.1 Prerequisites
 
 - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
 
 If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
-#### 4.2 Launching the project
+#### 3.2 Install dependencies ( NodeJs version 12.18 needed ❗ )
 
 - `cd ../backend`
 - The `yarn` command will allow you to install the dependencies.
 - The `yarn dev` command will allow you to run the micro API.
 
-#### 4.3 Back-end dependencies
+#### 3.3 Back-end dependencies
 
 ```json
   "dependencies": {
@@ -110,7 +108,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
   }
 ```
 
-#### 4.4 Possible endpoints
+#### 3.4 Possible endpoints
 
 This project includes four endpoints that you will be able to use:
 
@@ -121,7 +119,7 @@ This project includes four endpoints that you will be able to use:
 
 **Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
-#### 4.5 Examples of queries
+#### 3.5 Examples of queries
 
 - `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
 - `http://localhost:3000/user/18` - Retrieves user 18's main information.
