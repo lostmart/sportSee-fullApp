@@ -12,6 +12,7 @@ This repository contains the full application code for SportSee, a comprehensive
 - [Installation](#installation)
 - [Contributing](#contribute)
 - [License](#license)
+- # [Heading Link](#section-i-want)
 
 ## Introduction{#intro}
 
@@ -19,9 +20,8 @@ SportSee is designed to provide a holistic view of an individual's fitness journ
 
 This repository contains the complete codebase for the SportSee application, including both the front-end and back-end components. The front-end is built with React, while the back-end is powered by [Node.js](#https://nodejs.org/en) and [Express.js](#https://expressjs.com/). The application uses a RESTful API to communicate between the front-end and back-end.
 
->
->The frontend has two operating modes: =="API" and "MOCK"==
->: When the "API" mode is set to true, the 'dataFetcher' service will use axios to bring the data from the back-end. However, if >set to false (offline mode) it will import the data without the >need of an API or back-end.
+> The frontend has two operating modes: =="API" and "MOCK"==
+> : When the "API" mode is set to true, the 'dataFetcher' service will use axios to bring the data from the back-end. However, if >set to false (offline mode) it will import the data without the >need of an API or back-end.
 
 `services/dataFetcher.js`
 
@@ -46,12 +46,15 @@ SportSee-fullApp offers a wide range of features to help users monitor and impro
 To run the SportSee application locally, follow these steps:
 
 ### 1. Clone it on your computer
+
 `git clone https://github.com/lostmart/sportSee-fullApp.git`
 
 ### 2. Install dependencies for the front-end:
 
 - `cd frontend`
 - `npm install`
+
+## [Section I Want]
 
 #### Front-end dependencies
 
@@ -94,7 +97,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 - The `yarn` command will allow you to install the dependencies.
 - The `yarn dev` command will allow you to run the micro API.
 
-###Back-end dependencies
+#### 4.3 Back-end dependencies
 
 ```json
   "dependencies": {
@@ -108,25 +111,20 @@ If you are working with several versions of NodeJS, we recommend you install [nv
   }
 ```
 
-## [🔝](#top)
+#### 4.4 Possible endpoints
 
-##Contributing{#contribute}
-Contributions to SportSee-fullApp are welcome! If you would like to contribute to the project, please follow these steps:
+This project includes four endpoints that you will be able to use:
 
-1. Fork the repository.
+- `http://localhost:3000/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+- `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
+- `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
+- `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
 
+**Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
-2. Create a new branch for your feature or bug fix:
-`git checkout -b feature/your-feature-name`
+#### 4.5 Examples of queries
 
-3. Make your changes and commit them:
-`git commit -m "Add your commit message"`
-
-4. Push your changes to your forked repository:
-`git push origin feature/your-feature-name`
-
-5. Open a pull request in this repository, and provide a detailed description of your changes.
-
-Please ensure that your code adheres to the existing coding style and conventions used in the project. Additionally, include relevant tests and documentation for your changes to ensure smooth integration.
+- `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
+- `http://localhost:3000/user/18` - Retrieves user 18's main information.
 
 ## [🔝](#top)
