@@ -7,7 +7,7 @@ const Header = ({ userInfos }) => {
 			<h2>
 				Bonjour <span>{userInfos.firstName}</span>
 			</h2>
-			<p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+			<p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
 		</div>
 	)
 }

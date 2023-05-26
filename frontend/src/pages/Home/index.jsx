@@ -83,7 +83,7 @@ const Home = () => {
 
 	/*   error handling   */
 	if (userData && userData.message === 'Request failed with status code 404') {
-		console.clear()
+		// console.clear()
 		return <Navigate to="/12"></Navigate>
 	}
 	if (hasError) return <ErrorPage msg={hasError.msg} />

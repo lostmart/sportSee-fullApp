@@ -22,12 +22,16 @@ import VerticalNavigation from './components/VerticalNavigation'
 
 import { API_MODE } from './services/dataFetcher'
 
+const CheckOnline = () => {
+	return !API_MODE ? <OfflineMode /> : ''
+}
+
 const Layout = () => {
 	return (
 		<>
 			<TopNavigation />
 			<VerticalNavigation />
-			{!API_MODE ? <OfflineMode /> : ''}
+			<CheckOnline />
 			<main className="container">
 				<Outlet></Outlet>
 			</main>
