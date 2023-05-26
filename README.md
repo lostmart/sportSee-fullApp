@@ -5,14 +5,13 @@
 Welcome to the SportSee-fullApp repository! 👋
 This repository contains the full application code for SportSee, a comprehensive fitness tracking and analysis platform that uses [Recharts](#https://recharts.org/en-US/) to visually display the user's data regarding their fitness condition. SportSee allows users to track their physical activities, monitor their fitness progress, and gain valuable insights into their health and performance.
 
-## Table of Contents{#top}
+## Table of Contents
 
-- [Introduction](#intro)
-- [Features](#features)
-- [Installation](#installation)
-- [Contributing](#contribute)
-- [License](#license)
-- # [Heading Link](#section-i-want)
+- ### [Introduction](#intro)
+- ### [Features](#features)
+- ### [Installation](#installation)
+- ### [Contributing](#contribute)
+- ### [License](#license)
 
 ## Introduction{#intro}
 
@@ -27,7 +26,7 @@ This repository contains the complete codebase for the SportSee application, inc
 
 ![alt text](api-mode.png)
 
-## [🔝](#top)
+## [🔝](#table-of-contents)
 
 ##Features {#features}
 SportSee-fullApp offers a wide range of features to help users monitor and improve their fitness journey. Some key features of the application include:
@@ -40,7 +39,7 @@ SportSee-fullApp offers a wide range of features to help users monitor and impro
 
 - **Goal Setting:** Users can set specific fitness goals, such as weight loss, endurance training, or muscle gain.
 
-## [🔝](#top)
+## [🔝](#table-of-contents)
 
 ##Installation{#installation}
 To run the SportSee application locally, follow these steps:
@@ -127,4 +126,4 @@ This project includes four endpoints that you will be able to use:
 - `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
 - `http://localhost:3000/user/18` - Retrieves user 18's main information.
 
-## [🔝](#top)
+## [🔝](#table-of-contents)
