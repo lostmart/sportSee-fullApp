@@ -3,7 +3,8 @@
 # SportSee
 
 Welcome to the SportSee-fullApp repository! 👋
-This repository contains the full application code for SportSee, a comprehensive fitness tracking and analysis platform that uses [Recharts](#https://recharts.org/en-US/) to visually display the user's data regarding their fitness condition. SportSee allows users to track their physical activities, monitor their fitness progress, and gain valuable insights into their health and performance.
+This repository contains the full application code for SportSee, a comprehensive fitness tracking and analysis platform that uses
+[Recharts](#https://recharts.org/en-US/) to visually display the user's data regarding their fitness condition. SportSee allows users to track their physical activities, monitor their fitness progress, and gain valuable insights into their health and performance.
 
 ## Table of Contents
 
@@ -21,8 +22,8 @@ SportSee is designed to provide a holistic view of an individual's fitness journ
 
 This repository contains the complete codebase for the SportSee application, including both the front-end and back-end components. The front-end is built with React, while the back-end is powered by [Node.js](#https://nodejs.org/en) and [Express.js](#https://expressjs.com/). The application uses a RESTful API to communicate between the front-end and back-end.
 
-> The frontend has two operating modes: =="API" and "MOCK"==
-> : When the "API" mode is set to true, the 'dataFetcher' service will use axios to bring the data from the back-end. However, if >set to false (offline mode) it will import the data without the >need of an API or back-end.
+> The frontend has two operating modes: "API" and "MOCK"
+> : When the "API" mode is set to true, the 'dataFetcher' service will use axios to bring the data from the back-end. However, if set to false (offline mode) it will import the data without the >need of an API or back-end.
 
 `services/dataFetcher.js`
 
