@@ -7,11 +7,13 @@ This repository contains the full application code for SportSee, a comprehensive
 
 ## Table of Contents
 
-### [Introduction](#introduction)
+- #### [Intro](#introduction)
 
-### [Features](#features)
+- #### [General Features](#features)
 
-### [Installation](#installation)
+- #### [Front and back installation](#installation)
+
+---
 
 ## [Introduction]
 
