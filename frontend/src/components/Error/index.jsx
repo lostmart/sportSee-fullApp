@@ -10,7 +10,7 @@ const ErrorPage = ({ msg }) => {
 				<img src={meditate} alt={msg} />
 			</div>
 			<p>
-				nous semblons rencontrer une erreur de réseau. Veuillez cliquer ici pour
+				Nous semblons rencontrer une erreur de réseau. Veuillez cliquer ici pour
 				recharger la page et réessayer...
 			</p>
 			<button

@@ -4,7 +4,7 @@ import UserActivity from '../classes/userActivity'
 import UserPerformance from '../classes/userPerformance'
 import offLineData from '../offLineData/data.json'
 
-export const API_MODE = true
+export const API_MODE = false
 
 /**
  * @async
